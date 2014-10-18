@@ -3,7 +3,9 @@
 # wget https://github.com/escribano/habitatione/shell/debian/boot.sh
 # curl http://npmjs.org/install.sh | sh
 #
-# wget https://github.com/escribano/debian/raw/master/boot.sh | source
+# wget -qO- https://github.com/escribano/debian/raw/master/boot.sh | bash
+
+boot.test
 
 function boot.test () {
   echo "book ok"
