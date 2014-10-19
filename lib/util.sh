@@ -3,9 +3,12 @@ function show.function {
 }
 
 function setup.hegel () {
-  VAR_ROOT_PATH="$ROOT_PATH/var"
-  HEGEL_PATH="$ROOT_PATH/var/hegel"
+  #VAR_ROOT_PATH="$ROOT_PATH/var"
+  #HEGEL_PATH="$ROOT_PATH/var/hegel"
   #SHELL_ROOT_PATH="$ROOT_PATH/shell/hegel"
+  PHILOSOPHIE_PATH="$HOME/philosophie"
+  HEGEL_PATH="$PHILOSOPHIE_PATH/hegel"
+  PROFILE="$HOME/.profile"
 }
 
 function clone.hegel () {

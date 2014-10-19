@@ -7,9 +7,9 @@
 # wget -qO- https://github.com/escribano/hegel/raw/master/setup.sh | bash
 
 SAVED_PWD=`pwd`
-PHILOSOPHIE_PATH="$HOME/philosophie"
-HEGEL_PATH="$PHILOSOPHIE_PATH/hegel"
-PROFILE="$HOME/.profile"
+export PHILOSOPHIE_PATH="$HOME/philosophie"
+export HEGEL_PATH="$PHILOSOPHIE_PATH/hegel"
+export PROFILE="$HOME/.profile"
 mkdir -p $HEGEL_PATH
 cd $PHILOSOPHIE_PATH
 git clone git@github.com:escribano/hegel.git
