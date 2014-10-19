@@ -10,7 +10,7 @@ function master.user {
   sudo -i
   useradd -m ademir -s /bin/bash
   mkdir /home/ademir/.ssh
-  wget -qO- https://github.com/escribano/debian/raw/master/id_rsa.pub \
+  wget -qO- https://github.com/escribano/hegel/raw/master/config/id_rsa.pub \
     >> /home/ademir/.ssh/authorized_keys
   chmod 700 /home/ademir/.ssh
   chmod 600 /home/ademir/.ssh/authorized_keys

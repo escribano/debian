@@ -6,6 +6,14 @@ function intall.nginx () {
   sudo apt-get install nginx -y
   #Suggested packages:
   #  libgd-tools geoip-bin fcgiwrap nginx-doc
+  sudo unlink /etc/nginx/sites-enabled/default
+  
+  nginx
+  /usr/local/etc/nginx/mime.types
+  application/json                      json;
+  sudo nginx -s reload
+  curl -v http://habitatione.prd/saopaulo/1413404116/locales/en.json
+  nginx -v
 }
 
 function intall.packages () {
@@ -26,8 +34,10 @@ function nginx.stock () {
   apt-get install nginx geoip-bin spawn-fcgi libfcgi-dev -y
   cp config/mapa.nginx.conf /etc/nginx/sites-available
   ln -s /etc/nginx/sites-available/mapa.nginx.conf /etc/nginx/sites-enabled/mapa
-  unlink /etc/nginx/sites-enabled/default
-  /etc/init.d/nginx restart
+  sudo unlink /etc/nginx/sites-enabled/default
+  sudo unlink /etc/nginx/sites-enabled/hab
+  sudo /etc/init.d/nginx restart
+  sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
   
   cp config/nginx/mapa.nginx.conf /etc/nginx/sites-available
   ln -s /etc/nginx/sites-available/mapa.nginx.conf /etc/nginx/sites-enabled/mapa

@@ -66,14 +66,4 @@ function open.hsl () {
   open file:///Users/ademir/code/geo/src/mapfile/hsl.html
 }
 
-alias mate.mestre="mate ~/code/habitacao/mestre"
-alias mate.mapa="mate ~/code/mapa"
-alias mate.authd="mate ~/code/habitacao/go/src/github.com/escribano/authd"
-alias mate.db="mate ~/code/db"
-alias mate.profile="mate ~/.profile"
-alias mate.home="mate ~"
-alias mate.dnsmasq.exemplo="mate /usr/local/Cellar/dnsmasq/2.72/dnsmasq.conf.example"
-alias mate.hab="mate ~/code/habitatione/go/src/github.com/escribano/habitatione"
-alias go.hab="cd ~/code/habitatione/go/src/github.com/escribano/habitatione"
-alias mate.geoadmin="mate ~/code/habitatione/fork/geoadmin"
 

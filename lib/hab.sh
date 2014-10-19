@@ -1,25 +1,3 @@
-function deploy.hab () {
-  DIST_DIR="/tmp"
-  ARCHIVE_NAME="hab"
-  FROM_DIR="/tmp/hab"
-  PRD_DIR="$ROOT_PATH/ng/habitatione/prd"
-  CONFIG_DIR="$ROOT_PATH/config"
-  export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
-  export COPYFILE_DISABLE=true
-  rm -rf $FROM_DIR
-  mkdir -p $FROM_DIR
-  cp -R $PRD_DIR /tmp/hab
-  mkdir -p $FROM_DIR/config
-  cp $CONFIG_DIR/hab.debian.nginx.conf /tmp/hab/config
-  tar -c --exclude-from=$ROOT_PATH/.tarignore -vzf "$DIST_DIR"/$ARCHIVE_NAME.tar.gz -C $FROM_DIR .
-}
-
-function xplode.hab () {
-  #rm -rf /mnt/ebs/data/gis/import/sql
-  rm -rf /tmp/test
-  mkdir -p /tmp/test
-  tar xzvf /tmp/hab.tar.gz -C /tmp/test
-}
 
 function install.hab () {
   INSTALL_DIR="/opt/hab/ng/city/saopaulo"

@@ -1,0 +1,140 @@
+body {
+  background-color: rgb(11, 11, 11);
+  font: 400 3.938em/1.38 futura-pt;
+  color: rgb(62, 60, 60);
+  min-width: 600px !important;
+}
+
+
+*{-webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      —transition: all 0.2s ease;
+    }
+
+.text {
+  position: absolute;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: -2px;
+  color: rgb(62, 60, 60);
+  text-align: right;
+
+}
+
+.text-1 {
+  top: 514px;
+  right: 7%;
+  z-index: 5;
+  width: 79.75%;
+}
+
+.text-1:hover {
+  color: rgb(147, 40, 248);
+}
+
+.text-2 {
+  top: 427px;
+  right: 7%;
+  z-index: 4;
+  width: 79.75%;
+}
+
+.text-2:hover {
+  color: rgb(40, 195, 248);
+}
+
+.text-1:active{color:#6b22b0;}
+
+.text-2:active {
+  color: rgb(29, 156, 200);
+}
+
+.text-3 {
+  top: 340px;
+  right: 7%;
+  z-index: 3;
+  width: 79.75%;
+}
+
+.text-3:hover {
+  color: rgb(184, 159, 63);
+}
+
+.text-3:active {
+  color: rgb(203, 203, 76);
+}
+
+.text-4 {
+  top: 253px;
+  right: 7%;
+  z-index: 2;
+  width: 79.75%;
+}
+
+.text-4:hover {
+  color: rgb(37, 243, 42);
+}
+
+.text-4:active {
+  color: rgb(33, 177, 37);
+}
+
+.text-5 {
+  top: 166px;
+  right: 7%;;
+  z-index: 1;
+  width: 79.8333333333%;
+  word-break: break-word;
+  word-wrap: keep-all;
+  white-space: nowrap;
+}
+
+.text-5:hover {
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(247, 116, 84);
+}
+
+.text-5:active {
+  color: rgba(201, 80, 51, 0.99);
+}
+
+.text-6 {
+  top: 79px;
+  right: 7%;
+  width: 79.75%;
+}
+
+.text-6:hover {
+  color: rgb(63, 37, 243);
+}
+
+.text-6:active {
+  color: rgb(59, 38, 202);
+}
+
+
+@media  screen and (max-width: 1300px) { 
+/* Styles */
+.text {
+  text-align: center;
+
+}
+
+
+@media  screen and (max-width: 1024px) { 
+/* Styles */
+.text {
+text-align: left;
+
+}
+
+
+
+
+}
+
+
+
