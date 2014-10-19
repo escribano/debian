@@ -1,7 +1,7 @@
 http://floaternet.com/golang/godeb
 
 
-First of all, you have to install godeb. (if that's already done, skip to Running Godeb) You can either use the provided binary packages although I recommend installing it yourself using the outdated packages from the repositories. After you've installed and set up the older version of go it's just one command to install godeb.
+# First of all, you have to install godeb. (if that's already done, skip to Running Godeb) You can either use the provided binary packages although I recommend installing it yourself using the outdated packages from the repositories. After you've installed and set up the older version of go it's just one command to install godeb.
 
 go get launchpad.net/godeb
 Note: It is possible to get an error similar to this:

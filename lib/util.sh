@@ -1,7 +1,3 @@
-function show.function {
-   declare -f "$1"
-}
-
 function setup.hegel () {
   #VAR_ROOT_PATH="$ROOT_PATH/var"
   #HEGEL_PATH="$ROOT_PATH/var/hegel"
@@ -29,7 +25,6 @@ function source.hegel {
   SAVED_PWD=`pwd`
   cd $HEGEL_PATH
   source ./install
-  #git pull origin master
   cd $SAVED_PWD
 }
 
@@ -42,28 +37,9 @@ function push.hegel {
   cd $SAVED_PWD
 }
 
-function add.hegel.to.bashrc () {
-  echo "" >> ~/.bashrc
-  echo "source $HEGEL_ROOT_PATH/install" >> ~/.bashrc
-  #echo "" >> .bashrc
-}
-
-function add.hegel.to.profile () {
-  echo "" >> ~/.profile
-  echo "source $HEGEL_ROOT_PATH/install" >> ~/.profile
-  #echo "" >> ~/.profile
-}
-
 function goto.hegel () {
-  cd ~/code/habitatione/go/src/github.com/escribano/habitatione
+  cd ~$HEGEL_PATH
 }
 
-function reset.known.hosts () {
-  cat /dev/null > /Users/ademir/.ssh/known_hosts
-}
-
-function open.hsl () {
-  open file:///Users/ademir/code/geo/src/mapfile/hsl.html
-}
 
 

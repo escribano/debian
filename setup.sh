@@ -19,36 +19,3 @@ cd hegel
 printf "\nsource $HEGEL_PATH/install\n" >> $PROFILE
 #source ./install
 cd $SAVED_PWD
-
-function setup.hegel.var () {
-  #VAR_ROOT_PATH="$ROOT_PATH/var"
-  HEGEL_PATH="$HOME/var/hegel"
-  #SHELL_ROOT_PATH="$ROOT_PATH/shell/hegel"
-}
-
-function clone.hegel () {
-  SAVED_PWD=`pwd`
-  cd $HEGEL_PATH
-  git clone git@github.com:escribano/hegel.git
-  cd $SAVED_PWD
-}
-
-function pull.hegel {
-  SAVED_PWD=`pwd`
-  cd $HEGEL_PATH
-  git pull origin master
-  cd $SAVED_PWD
-}
-
-function source.hegel {
-  SAVED_PWD=`pwd`
-  cd $HEGEL_PATH
-  source ./install
-  #git pull origin master
-  cd $SAVED_PWD
-}
-
-#setup.hegel.var
-#clone.hegel
-
-

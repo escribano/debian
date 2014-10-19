@@ -96,6 +96,8 @@ source "$HEGEL_LIB_PATH/ebs.sh"
 source "$HEGEL_LIB_PATH/nginx.sh"
 source "$HEGEL_LIB_PATH/tar.sh"
 source "$HEGEL_LIB_PATH/hab.sh"
+source "$HEGEL_LIB_PATH/tools.sh"
+source "$HEGEL_LIB_PATH/sein.sh"
 
 source "$HEGEL_LIB_PATH/main.sh"
 

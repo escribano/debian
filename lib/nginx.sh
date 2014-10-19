@@ -7,26 +7,11 @@ function intall.nginx () {
   #Suggested packages:
   #  libgd-tools geoip-bin fcgiwrap nginx-doc
   sudo unlink /etc/nginx/sites-enabled/default
-  
-  nginx
-  /usr/local/etc/nginx/mime.types
-  application/json                      json;
-  sudo nginx -s reload
-  curl -v http://habitatione.prd/saopaulo/1413404116/locales/en.json
-  nginx -v
 }
 
-function intall.packages () {
-  sudo -i
-  sudo apt-get update && apt-get upgrade -y
-  sudo apt-get install build-essential curl git unzip -y
-}
 
-function intall.ebs () {
-  sudo -i
-  sudo apt-get update && apt-get upgrade -y
-  sudo apt-get install build-essential curl git unzip -y
-}
+
+
 
 
 
@@ -56,4 +41,11 @@ function nginx.stock () {
   rm /var/log/nginx/mapa.access.log
   rm /var/log/nginx/mapa.error.log
   rm /var/log/nginx/mapa.*.log
+  
+  nginx
+  /usr/local/etc/nginx/mime.types
+  application/json                      json;
+  sudo nginx -s reload
+  curl -v http://habitatione.prd/saopaulo/1413404116/locales/en.json
+  nginx -v
 }

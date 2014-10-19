@@ -19,6 +19,7 @@ Check that Go is installed correctly by building a simple program, as follows.
 
 Create a file named hello.go and put the following program in it:
 
+nano hello.go
 package main
 
 import "fmt"
@@ -65,35 +66,36 @@ src/
 
 The GOPATH environment variable
 
-The GOPATH environment variable specifies the location of your workspace. It is likely the only environment variable you'll need to set when developing Go code.
+# The GOPATH environment variable specifies the location of your workspace. It is likely the only environment variable you'll need to set when developing Go code.
 
-To get started, create a workspace directory and set GOPATH accordingly. Your workspace can be located wherever you like, but we'll use $HOME/go in this document. Note that this must not be the same path as your Go installation.
+# To get started, create a workspace directory and set GOPATH accordingly. Your workspace can be located wherever you like, but we'll use $HOME/go in this document. Note that this must not be the same path as your Go installation.
 
 $ mkdir $HOME/go
 $ export GOPATH=$HOME/go
-For convenience, add the workspace's bin subdirectory to your PATH:
+
+#For convenience, add the workspace's bin subdirectory to your PATH:
 
 $ export PATH=$PATH:$GOPATH/bin
 
 Package paths
 
-The packages from the standard library are given short paths such as "fmt" and "net/http". For your own packages, you must choose a base path that is unlikely to collide with future additions to the standard library or other external libraries.
+# The packages from the standard library are given short paths such as "fmt" and "net/http". For your own packages, you must choose a base path that is unlikely to collide with future additions to the standard library or other external libraries.
 
-If you keep your code in a source repository somewhere, then you should use the root of that source repository as your base path. For instance, if you have a GitHub account at github.com/user, that should be your base path.
+# If you keep your code in a source repository somewhere, then you should use the root of that source repository as your base path. For instance, if you have a GitHub account at github.com/user, that should be your base path.
 
-Note that you don't need to publish your code to a remote repository before you can build it. It's just a good habit to organize your code as if you will publish it someday. In practice you can choose any arbitrary path name, as long as it is unique to the standard library and greater Go ecosystem.
+# Note that you don't need to publish your code to a remote repository before you can build it. It's just a good habit to organize your code as if you will publish it someday. In practice you can choose any arbitrary path name, as long as it is unique to the standard library and greater Go ecosystem.
 
-We'll use github.com/user as our base path. Create a directory inside your workspace in which to keep source code:
+# We'll use github.com/user as our base path. Create a directory inside your workspace in which to keep source code:
 
 $ mkdir -p $GOPATH/src/github.com/user
 
 
 Your first program
 
-To compile and run a simple program, first choose a package path (we'll use github.com/user/hello) and create a corresponding package directory inside your workspace:
+# To compile and run a simple program, first choose a package path (we'll use github.com/user/hello) and create a corresponding package directory inside your workspace:
 
 $ mkdir $GOPATH/src/github.com/user/hello
-Next, create a file named hello.go inside that directory, containing the following Go code.
+# Next, create a file named hello.go inside that directory, containing the following Go code.
 
 package main
 
