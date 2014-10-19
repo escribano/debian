@@ -11,5 +11,5 @@ function install.sein () {
 }
 
 function run.sein () {
-  /opt/hab/daemon/sein
+  /opt/hab/daemon/sein/sein
 }
