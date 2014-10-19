@@ -5,6 +5,43 @@
 #
 # wget -qO- https://github.com/escribano/debian/raw/master/boot.sh | bash
 
+function master.user {
+  sudo -i
+  useradd -m ademir -s /bin/bash
+  mkdir /home/ademir/.ssh
+  wget -qO- https://github.com/escribano/debian/raw/master/id_rsa.pub \
+    >> /home/ademir/.ssh/authorized_keys
+  chmod 700 /home/ademir/.ssh
+  chmod 600 /home/ademir/.ssh/authorized_keys
+  chown -R ademir.ademir /home/ademir
+  #echo "ademir ALL=(ALL:ALL) ALL" > /etc/sudoers.d/master-user
+  #echo "ademir ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/master.user
+  #echo "admin ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/master-user
+  echo "ademir ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/master-user
+  chmod 0440 /etc/sudoers.d/master-user
+  
+  printf "hello\nworld\n"
+  echo -e "Hello\nworld"
+  echo -e 'Hello\nworld'
+  echo Hello$'\n'world
+  echo $'hello\nworld'
+
+
+
+  # cat id_rsa.pub >> /home/ademir/.ssh/authorized_keys
+
+  history -c
+}
+
+function config.locale () {
+  #locale -a
+  #cat /etc/locale.gen | grep pt_BR.UTF-8
+  sed -ri 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen
+  locale-gen
+  #sed -ri 's/pt_BR.UTF-8 UTF-8/# pt_BR.UTF-8 UTF-8/' /etc/locale.gen
+  #locale-gen pt_BR.UTF-8
+  #dpkg-reconfigure locales
+}
 
 
 function boot.test () {
@@ -23,12 +60,9 @@ function sudoi () {
   sudo -i
 }
 
-function intall.packages () {
-  apt-get update && apt-get upgrade -y
-  apt-get install build-essential curl git unzip -y
-}
 
-function master.users () {
+
+function master.users.old () {
   #ademir ALL=(ALL) NOPASSWD:ALL
   #/etc/sudoers.d/master.users
   useradd -m ademir -s /bin/bash
@@ -39,11 +73,11 @@ function master.users () {
   mode 0440
 }
 
-function create.me {
-  useradd -m ademir -s /bin/bash
-  #echo "ademir ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/init-ademir
-  echo "ademir ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/master.users
-  chmod 0440 /etc/sudoers.d/master.users
+
+
+function secure.me () {
+  mkdir /home/ademir/.ssh
+  cat id_rsa.pub >> /home/ademir/.ssh/authorized_keys
 }
 
 function install.key {
@@ -61,4 +95,4 @@ function install.key {
   #ls -alh /home/ademir/.ssh/authorized_keys
 }
 
-boot.test
+#master.user
