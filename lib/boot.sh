@@ -4,6 +4,7 @@
 # curl http://npmjs.org/install.sh | sh
 #
 # wget -qO- https://github.com/escribano/debian/raw/master/boot.sh | bash
+# wget -qO- https://github.com/escribano/hegel/raw/master/boot.sh | bash
 
 function master.user {
   sudo -i
@@ -31,6 +32,12 @@ function master.user {
   # cat id_rsa.pub >> /home/ademir/.ssh/authorized_keys
 
   history -c
+}
+
+function intall.packages () {
+  sudo -i
+  sudo apt-get update && sudo apt-get upgrade -y
+  sudo apt-get install build-essential curl git unzip -y
 }
 
 function config.locale () {
