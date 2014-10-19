@@ -15,7 +15,7 @@ function install.hab.root () {
   INSTALL_DIR="/opt/hab/root"
   sudo rm -rf $INSTALL_DIR
   sudo mkdir -p $INSTALL_DIR
-  cp -R $HEGEL_PATH/site $INSTALL_DIR/
+  sudo cp -R $HEGEL_PATH/site $INSTALL_DIR/
   #chmod -R +r shell/hegel/site/css
   #sudo tar xzvf /tmp/hab.tar.gz -C $INSTALL_DIR
   #sudo ln -f -s $INSTALL_DIR/config/hab.debian.nginx.conf /etc/nginx/sites-enabled/hab
