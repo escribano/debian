@@ -10,7 +10,7 @@ SAVED_PWD=`pwd`
 PHILOSOPHIE_PATH="$HOME/philosophie"
 HEGEL_PATH="$PHILOSOPHIE_PATH/hegel"
 PROFILE="$HOME/.profile"
-mkdir $HEGEL_PATH
+mkdir -p $HEGEL_PATH
 cd $PHILOSOPHIE_PATH
 git clone git@github.com:escribano/hegel.git
 printf "\nsource $HEGEL_ROOT_PATH/install\n" >> $PROFILE
