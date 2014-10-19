@@ -17,7 +17,7 @@ cd $PHILOSOPHIE_PATH
 git clone $HEGEL_GIT
 cd hegel
 printf "\nsource $HEGEL_PATH/install\n" >> $PROFILE
-source ./install
+#source ./install
 cd $SAVED_PWD
 
 function setup.hegel.var () {
